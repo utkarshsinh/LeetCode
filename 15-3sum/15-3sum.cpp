@@ -16,7 +16,7 @@ public:
             {
             if(nums[l] + nums[h] + nums[i] == 0)
             {
-                result.push_back({nums[i],nums[l],nums[h]});
+                result.push_back(vector<int>{nums[i],nums[l],nums[h]});
                  while (l<h && nums[l] == nums[l+1]) 
                         l++;
                     // to handle duplicates
