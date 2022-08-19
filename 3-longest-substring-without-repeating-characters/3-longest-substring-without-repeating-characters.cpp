@@ -8,6 +8,7 @@ public:
          
         // Note : Default values in visited are false
         vector<bool> visited(256);   
+         visited[s[i]] = false;
  
         for (int j = i; j < n; j++) {
  
@@ -27,7 +28,7 @@ public:
  
         // Remove the first character of previous
         // window
-        visited[s[i]] = false;
+       
     }
     return res;
     }
