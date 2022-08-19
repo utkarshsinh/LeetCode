@@ -1,35 +1,14 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-         int n = s.size();
-    int res = 0; // result
- 
-    for (int i = 0; i < n; i++) {
-         
-        // Note : Default values in visited are false
-        vector<bool> visited(256);   
-         visited[s[i]] = false;
- 
-        for (int j = i; j < n; j++) {
- 
-            // If current character is visited
-            // Break the loop
-            if (visited[s[j]] == true)
-                break;
- 
-            // Else update the result if
-            // this window is larger, and mark
-            // current character as visited.
-            else {
-                res = max(res, j - i + 1);
-                visited[s[j]] = true;
-            }
+        int i=0,res=0;
+        vector<int> lastindex(256,INT_MIN);
+        for(int j=0;j<s.size();j++)
+        {
+            i=max(i,lastindex[s[j]]+1);
+                res=max(res,j-i+1);
+            lastindex[s[j]]=j;
         }
- 
-        // Remove the first character of previous
-        // window
-       
-    }
-    return res;
+        return res;
     }
 };
