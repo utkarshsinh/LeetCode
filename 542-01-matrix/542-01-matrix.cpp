@@ -17,7 +17,7 @@ public:
             }
         }
 
-        int dir[4][2] = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+         vector<vector<int>> dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
         while (!q.empty()) {
             pair<int, int> curr = q.front();
             q.pop();
