@@ -12,7 +12,7 @@ public:
     void push(int x) {
         
         s1.push(x);
-        if(s2.empty() || s1.top() <=s2.top()) s2.push(x);
+        if(s2.empty() || x <=s2.top()) s2.push(x);
         
     }
     
