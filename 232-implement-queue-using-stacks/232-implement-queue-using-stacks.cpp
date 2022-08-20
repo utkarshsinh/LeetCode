@@ -25,7 +25,7 @@ public:
                 s2.push(y);   
                 s1.pop();
             }
-            // return s2.top();
+             return s2.top();
         }
         return s2.top();
     }
