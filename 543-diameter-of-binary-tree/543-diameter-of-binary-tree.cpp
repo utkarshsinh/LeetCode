@@ -21,7 +21,7 @@ public:
         return 1 + max(lh,rh);
     }
     int diameterOfBinaryTree(TreeNode* root) {
-       int h = height(root);
+        height(root);
         return res;
     }
 };
