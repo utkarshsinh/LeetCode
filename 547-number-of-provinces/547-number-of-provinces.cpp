@@ -2,14 +2,14 @@ class Solution {
 public:
      int find(int a, vector<int> &parent)
         {
-            if(parent[a] == -1) return a;
-            return find(parent[a], parent);
+             if(parent[a] == -1) return a;
+             return find(parent[a], parent);
         }
      void _union(int x, int y, vector<int> &parent)
         {
             int p = find(x, parent);
             int q = find(y, parent);
-            if(p!=q) parent[p]=q;
+            if(p!=q) parent[q]=p;
         }
     int findCircleNum(vector<vector<int>>& isConnected) {
         int count=0;
