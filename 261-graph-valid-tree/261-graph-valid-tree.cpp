@@ -7,10 +7,10 @@ public:
     }
 
     int find(int x) {
-        while (x != root[x]) {
-            x = root[x];
+       if (x == root[x]) {
+            return x;
         }
-        return x;
+        return root[x] = find(root[x]);
     }
 
     bool unionSet(int x, int y) {
